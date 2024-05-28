@@ -2,6 +2,7 @@
 #sklearn bag of word model
 from sklearn.feature_extraction.text import CountVectorizer
 
+#Below is the bag of word approach. The downfall is that it needs to be trained on a lot of data and if it hasnt seen a word it will fail
 train_x = ["I love the book", "This is a great book","The fit is great","I love the shoes"]
 
 #Utilize CountVectorizer to transform the statements into vector representation
@@ -44,8 +45,17 @@ clf_svm.fit(train_x_vectors,train_y)
 
 #predict the classification from the sentence based on the training classification
 #This should classify as CLOTHING
+
+#We already have the data vectorized and classified.
+#We using the vectorizer we can predict whether a statement is related to books or clothing.
+#First transform the statement using the same vectorizer that knows the vectorized trained data
+#The transform will check which words match from the list of unique words from the trained data
+
 test_x = vectorizer.transform(['shoes are alright'])
+#Prints [[0 0 0 0 0 1 0 0]]
+# print(test_x.toarray())
+
 
 #This should classify as BOOKS
-test_x = vectorizer.transform(['I love reading'])
+test_x = vectorizer.transform(['I like jeans'])
 print(clf_svm.predict(test_x))
