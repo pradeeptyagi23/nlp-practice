@@ -1,0 +1,12 @@
+Machine Learning introduction:
+A model is a mathematical relationship derived from data that an ML system uses to make predictions
+	1. Machine learning is way to enable machines to do predictions based on the dataset provided with explicitly programming them.
+	2. This data allows these machines to learn from the data and become proficient by just learning from the data in similar tasks
+Types of Machine Learning Techniques.
+	1. Supervised learning : In this a dataset with correct values are fed to the model. The model examines the link between different data
+		in the dataset to understand how the correct answer was generated. It will then use this knowledge to predict output for problems with similar nature.
+		Supervise learning can be categorized into:
+		Consider a weather predicton app.
+		a. Regression: In this the model predicts the output as a number. Example if we use it to predict rainfall. The model will predict output in cm 1,2,3 etc.
+		b. Binary Classification : Predicts output in yes/no. that is whether it will rain or not
+		c. Multiclass Classification: Yeilds multiple classification from many classifications. Example, it will say rain yes/no, hail,snow etc.
